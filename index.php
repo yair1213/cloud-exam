@@ -6,10 +6,10 @@
 <body>
 <?php
 // Connect to the database
-$host = 'your-rds-endpoint';
-$user = 'your-username';
-$password = 'your-password';
-$dbname = 'your-database-name';
+$host = 'database-1.cx248m4we6k7.us-east-1.rds.amazonaws.com';
+$user = 'admin';
+$password = '12345678';
+$dbname = 'yair';
 $conn = mysqli_connect($host, $user, $password, $dbname);
 // Check connection
 if (!$conn) {
