@@ -16,7 +16,7 @@ if (!$conn) {
 die("Connection failed: " . mysqli_connect_error());
 }
 // Select all rows from the breached table
-$sql = "SELECT id, email, pass, date_add FROM breached";
+$sql = "SELECT id, email, pass, add_date FROM breached";
 $result = mysqli_query($conn, $sql);
 echo "<h1>Breached</h1>";
 echo "<table>";
@@ -25,7 +25,7 @@ Added</th></tr>";
 // Output the data from each row
 while ($row = mysqli_fetch_array($result)) {
 echo "<tr><td>" . $row['id'] . "</td><td>" . $row['email'] . "</td><td>" .
-$row['pass'] . "</td><td>" . $row['date_add'] . "</td></tr>";
+$row['pass'] . "</td><td>" . $row['add_date'] . "</td></tr>";
 }
 echo "</table>";
 mysqli_close($conn);
